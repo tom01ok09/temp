@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title>問卷</title>
+	<meta charset="UTF-8">
+	<script type="text/javascript">
+
+		function showMsg() {
+
+			var cnt = 5;
+			var n = Math.floor((Math.random() * 10) + 1);
+			var Url_ = "http://www.google.com";
+
+			document.getElementById("lnkSSL").href = Url_;
+
+			setInterval(function() {
+
+				if (--cnt >= 0){
+					document.getElementById("spnCountDown").innerHTML = cnt;
+				}else{
+					window.location = Url_;
+				}
+			}, 1000);
+
+		}
+
+	</script>
+
+
+</head>
+
+<body onload="showMsg();">
+
+	<div>
+		可點選<a id="lnkSSL">這裡</a>直接改用加密連線。<br />
+
+		或請稍候<span id="spnCountDown">5</span>秒
+	</div>
+
+</body></html>
