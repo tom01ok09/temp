@@ -8,10 +8,17 @@
 		var seconds = new Date().getTime();
 		var cnt = 10;
 		var Url_ = "";
+		//var n = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum; 
 		//document.write(seconds);
+
+		function randomm(s){
+			return Math.floor(Math.random() * (s%3600));
+		}
 
 		function redirect(){
 			var s = new Date().getTime();
+			s = Math.floor(Math.random() * (s%3600));
+			//document.write(s);
 			if(s%2==0){
 				window.location = "https://docs.google.com/forms/d/1gSHEpTieyirEdsiQXfNyPb2Dwc9FhNVUlsO6oGmjois/viewform";//內源性
 			}else{
